@@ -2,7 +2,7 @@ import axios from "axios";
 import React,{useEffect,useState} from "react";
 
 
-const Rent = () => {
+const Products = () => {
     const [Products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -13,7 +13,6 @@ const Rent = () => {
 
     const getProducts = async (e) => {
         const result = await axios.get(`https://assessment.api.vweb.app/products`);
-        console.log(result.data);
         setProducts(result.data);
     }
     
@@ -52,4 +51,4 @@ const Rent = () => {
 };
 
 
-export default Rent
+export default Products;

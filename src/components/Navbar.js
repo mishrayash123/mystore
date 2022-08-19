@@ -33,18 +33,16 @@ const Navbar =({setfav}) => {
                 <Link to="/products" className=" hover:bg-blue-900 text-base  text-red-900 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">
                                         Products
                                     </Link>
-                                    <Link to="/buy" className=" hover:bg-blue-900 text-base  text-red-900 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">
-                                        Buy
-                                    </Link>
-                                    <Link to="/sell" className=" hover:bg-blue-900 text-base  text-red-900 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">
-                                        Sell
-                                    </Link>
+                    
+                                   
                 </div>
               </div>
             </div>
             <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-2">
-                
+                <Link to="/users" className=" hover:bg-blue-900 text-base  text-red-900 hover:text-white  px-3 py-2 rounded-md text-sm font-medium">
+                                        Users
+                                    </Link>
                                 <Link to="/login" type="button" className="btn btn-outline-primary hover:bg-blue-900  text-red-900 px-3 py-2 rounded-md text-sm font-medium hover:text-white">
                                 Login
                                 </Link>
@@ -113,16 +111,14 @@ const Navbar =({setfav}) => {
           {(ref) => (
             <div className="md:hidden" id="mobile-menu">
               <div ref={divRef} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link to="/rent" className="hover:bg-blue-900  text-red-900 block px-3 py-2 rounded-md text-base hover:text-white font-medium">
-                                    Rent
+              <Link to="/products" className="hover:bg-blue-900  text-red-900 block px-3 py-2 rounded-md text-base hover:text-white font-medium">
+                                    Products
                                 </Link>
                                 
-                                <Link to="/buy" className="hover:bg-blue-900 text-red-900 block px-3 py-2 rounded-md hover:text-white text-base font-medium">
-                                Buy
+                                <Link to="/users" className="hover:bg-blue-900 text-red-900 block px-3 py-2 rounded-md hover:text-white text-base font-medium">
+                                Users
                                 </Link>
-                                <Link to="/sell" className="hover:bg-blue-900 text-red-900 block px-3 py-2 rounded-md hover:text-white text-base font-medium">
-                                Sell
-                                </Link>
+                               
                                 <Link to="/login" type="button" className=" btn btn-outline-primary  hover:bg-blue-900 text-red-900 block px-3 py-2 rounded-md hover:text-white text-base font-medium">
                                 Login
                                 </Link>
