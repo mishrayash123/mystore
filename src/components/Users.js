@@ -1,6 +1,6 @@
 import axios from "axios";
 import React,{useEffect,useState} from "react";
-
+import {Link} from 'react-router-dom';
 
 const Users = () => {
     const [Users, setUsers] = useState([]);
@@ -28,12 +28,30 @@ const Users = () => {
 
     return (
         <div className="mt-28">
-        <div class=" w-75 mx-auto">
-  <div class="">
-    <h3 class=" text-3xl font-bold font-sans text-red-300">Our Users</h3>
-  </div>
-</div>
-
+          <>
+          {
+           UsersShow ? 
+           <div class=" w-75 mx-auto">
+           <div class="">
+             <h3 class=" text-3xl font-bold font-sans text-red-300">Our Users</h3>
+           </div>
+         </div>  :
+          <div class=" w-75 mx-auto">
+          <div class="">
+            <h3 class=" text-3xl font-bold font-sans text-red-300">User's Past Orders</h3>
+          </div>
+          <Link to="/users" type="button" className="btn btn-warning hover:bg-blue-900  text-red-400 px-3 py-2 mt-3 rounded-md text-xl font-medium hover:text-white"
+          onClick={
+            (e) => {
+              setShowUsers(true);
+            }
+        }
+          >
+                                Go to users
+                                </Link>
+        </div>
+          }
+          </>
       <div className="mt-10">
       <div className="row row-cols-1 row-cols-md-3 g-4 mt-4 mb-36 w-75 mx-auto">
             {
@@ -79,7 +97,6 @@ const Users = () => {
         } 
         </div>
         </div> 
-   
     </div>
     );
 };
